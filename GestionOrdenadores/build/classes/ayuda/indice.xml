@@ -1,0 +1,12 @@
+<index>
+	<indexitem text="Ventana Principal" target="principal"/>
+	<indexitem text="Operarios" target="operarios"/>
+	<indexitem text="Clientes" target="clientes"/>
+	<indexitem text="Proveedores" target="proveedores"/>
+	<indexitem text="Tipos" target="tipos"/>
+	<indexitem text="Componentes" target="componentes"/>
+	<indexitem text="Ordenadores" target="ordenadores"/>
+	<indexitem text="Montajes" target="montajes"/>
+	<indexitem text="Reparaciones" target="reparaciones"/>
+	<indexitem text="Informes" target="informes"/>	
+</index>

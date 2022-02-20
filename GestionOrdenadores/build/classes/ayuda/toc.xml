@@ -1,0 +1,13 @@
+<toc version="1.0">
+	<tocitem text="Ventana Principal" target="principal">
+		<tocitem text="Operarios" target="operarios"/>
+		<tocitem text="Clientes" target="clientes"/>
+		<tocitem text="Proveedores" target="proveedores"/>
+		<tocitem text="Tipos" target="tipos"/>
+		<tocitem text="Componentes" target="componentes"/>
+		<tocitem text="Ordenadores" target="ordenadores"/>
+		<tocitem text="Montajes" target="montajes"/>
+		<tocitem text="Reparaciones" target="reparaciones"/>
+		<tocitem text="Informes" target="informes"/>		
+	</tocitem>
+</toc>

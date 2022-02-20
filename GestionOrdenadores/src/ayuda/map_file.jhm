@@ -1,0 +1,12 @@
+<map version="1.0">
+	<mapID target="principal" url="html/index.html"/>
+	<mapID target="operarios" url="html/operarios.html"/>
+	<mapID target="clientes" url="html/clientes.html"/>
+	<mapID target="proveedores" url="html/proveedores.html"/>
+	<mapID target="tipos" url="html/tipos.html"/>
+	<mapID target="componentes" url="html/componentes.html"/>
+	<mapID target="ordenadores" url="html/ordenadores.html"/>
+	<mapID target="montajes" url="html/montajes.html"/>
+	<mapID target="reparaciones" url="html/reparaciones.html"/>
+	<mapID target="informes" url="html/informes.html"/>
+</map>
