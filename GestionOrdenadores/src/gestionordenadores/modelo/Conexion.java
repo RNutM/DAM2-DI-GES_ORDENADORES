@@ -15,18 +15,21 @@ import javax.swing.JOptionPane;
  * @author examen
  */
 public class Conexion {
+
     private final String BD = "gestionordenadores";
     private final String USER = "root";
     private final String PASS = "";
     private final String URL = "jdbc:mysql://localhost/" + BD;
-    
-    public Connection conectar(){
-    Connection con = null;
-        try {           
-            System.out.println("Conectado a la BD");
+
+    public Connection conectar() {
+        Connection con = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con = (Connection) DriverManager.getConnection(URL, USER, PASS);
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error de conexión");    
-        }return con;
+            System.out.println("Conectado a la BD");
+        } catch (ClassNotFoundException | SQLException e) {
+            JOptionPane.showMessageDialog(null, "Error de conexión: " + e.getMessage());
+        }
+        return con;
     }
 }//Fin clase

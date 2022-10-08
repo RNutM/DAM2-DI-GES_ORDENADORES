@@ -563,7 +563,7 @@ public class ControladorPrincipal extends MouseAdapter implements ActionListener
         //////////////////////////AGRUPADO VISTA PREVIA/////////////////////////
         if (e.getSource() == vistaPrincipal.btnVistaAgrup){
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(ControladorPrincipal.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -581,13 +581,13 @@ public class ControladorPrincipal extends MouseAdapter implements ActionListener
             } catch (JRException ex) {
                 Logger.getLogger(ControladorPrincipal.class.getName()).log(Level.SEVERE, null, ex);
             }
-            JOptionPane.showMessageDialog(null, "Vista Previa por pantalla - Se cerrará tu programa, lo siento", "Vista en Pantalla", JOptionPane.WARNING_MESSAGE);
-            JasperViewer.viewReport(print);
+            JOptionPane.showMessageDialog(null, "Vista Previa por pantalla", "Vista en Pantalla", JOptionPane.WARNING_MESSAGE);
+            JasperViewer.viewReport(print,false);
             //////////////////////////FIN AGRUPADO VISTA PREVIA/////////////////
             //////////////////////////AGRUPADO PDF//////////////////////////////
         } else if (e.getSource() == vistaPrincipal.btnPdfAgrup){
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(ControladorPrincipal.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -614,7 +614,7 @@ public class ControladorPrincipal extends MouseAdapter implements ActionListener
              ///////////////////PARAMETRIZADO VISTA PREVIA//////////////////////   
         }else if (e.getSource() == vistaPrincipal.btnVistaParam){
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(ControladorPrincipal.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -626,7 +626,7 @@ public class ControladorPrincipal extends MouseAdapter implements ActionListener
                 Logger.getLogger(ControladorPrincipal.class.getName()).log(Level.SEVERE, null, ex);
             }
             //Pasar parametros
-            Map parametros = new HashMap();
+            Map<String, Object> parametros = new HashMap<String, Object>();
             parametros.put("MARCA", vistaPrincipal.cbParam.getSelectedItem());
             
             //Añadir librerias JasperReport
@@ -636,13 +636,13 @@ public class ControladorPrincipal extends MouseAdapter implements ActionListener
             } catch (JRException ex) {
                 Logger.getLogger(ControladorPrincipal.class.getName()).log(Level.SEVERE, null, ex);
             }
-            JOptionPane.showMessageDialog(null, "Vista Previa por pantalla - Se cerrará tu programa, lo siento", "Vista en Pantalla", JOptionPane.WARNING_MESSAGE);
-            JasperViewer.viewReport(print);
+           JOptionPane.showMessageDialog(null, "Vista Previa por pantalla", "Vista en Pantalla", JOptionPane.WARNING_MESSAGE);
+            JasperViewer.viewReport(print,false);
         }///////////////////FIN PARAMETRIZADO VISTA PREVIA//////////////////////
         //////////////////////////PARAMETRIZADO PDF///////////////////////////
         else if (e.getSource() == vistaPrincipal.btnPdfParam){
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(ControladorPrincipal.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -654,7 +654,7 @@ public class ControladorPrincipal extends MouseAdapter implements ActionListener
                 Logger.getLogger(ControladorPrincipal.class.getName()).log(Level.SEVERE, null, ex);
             }
             //Pasar parametros
-            Map parametros = new HashMap();
+            Map<String, Object> parametros = new HashMap<String, Object>();
             parametros.put("MARCA", vistaPrincipal.cbParam.getSelectedItem());
             
             //Añadir librerias JasperReport
