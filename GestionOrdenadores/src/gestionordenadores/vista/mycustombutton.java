@@ -18,7 +18,9 @@ import javax.swing.JButton;
  */
 public class mycustombutton extends JButton implements Serializable{
    
-    public mycustombutton() {
+    private static final long serialVersionUID = 1L;
+
+	public mycustombutton() {
     }
        
       @Override
